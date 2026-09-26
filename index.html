@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RealNetMirror — Movies</title>
+  <meta name="description" content="RealNetMirror — a modern movie discovery website.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html"><span>REAL</span>NET<span>MIRROR</span></a>
+  <nav>
+    <a class="active" href="#home">Home</a>
+    <a href="#movies">Movies</a>
+    <a href="#genres">Genres</a>
+  </nav>
+  <div class="search-wrap">
+    <input id="search" type="search" placeholder="Search movies..." aria-label="Search movies">
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="eyebrow">WELCOME TO REALNETMIRROR</p>
+      <h1>Discover your next<br><span>favorite movie.</span></h1>
+      <p class="hero-text">Browse a clean, fast movie catalog with titles, genres, ratings and release years.</p>
+      <a class="btn" href="#movies">Explore Movies</a>
+    </div>
+  </section>
+
+  <section class="section" id="movies">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">CATALOG</p>
+        <h2>Featured Movies</h2>
+      </div>
+      <div class="filters" id="genres">
+        <button class="filter active" data-genre="All">All</button>
+        <button class="filter" data-genre="Action">Action</button>
+        <button class="filter" data-genre="Drama">Drama</button>
+        <button class="filter" data-genre="Comedy">Comedy</button>
+        <button class="filter" data-genre="Sci-Fi">Sci-Fi</button>
+      </div>
+    </div>
+    <div id="movieGrid" class="movie-grid"></div>
+    <p id="empty" class="empty hidden">No movies found. Try another search.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="brand small"><span>REAL</span>NET<span>MIRROR</span></div>
+  <p>Movie discovery demo • Replace sample content with titles you are authorized to publish.</p>
+</footer>
+
+<div id="modal" class="modal hidden" aria-hidden="true">
+  <div class="modal-card">
+    <button id="close" class="close" aria-label="Close">×</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
